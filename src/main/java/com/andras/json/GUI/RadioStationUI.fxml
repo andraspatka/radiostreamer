@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.16029143897996356" orientation="VERTICAL" prefHeight="551.0" prefWidth="839.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.andras.json.GUI.RadioStationUI">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="63.0" prefWidth="837.0">
+            <children>
+                <ImageView fx:id="playbackImage" fitHeight="58.0" fitWidth="81.0" layoutX="14.0" layoutY="10.0" onMouseClicked="#playbackControl" pickOnBounds="true" preserveRatio="true" />
+
+                <TextField fx:id="stationNameTextField" editable="false" layoutX="109.0" layoutY="5.0" prefHeight="32.0" prefWidth="498.0" />
+                <TextField fx:id="genreTextField" editable="false" layoutX="109.0" layoutY="41.0" prefHeight="32.0" prefWidth="498.0" />
+                <ImageView fitHeight="67.0" fitWidth="222.0" layoutX="609.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../../resources/shoutcast.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <children>
+                <ListView fx:id="genresList" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                <TableView fx:id="stationTableView" layoutX="200.0" prefHeight="453.0" prefWidth="641.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="stationColumn" prefWidth="432.0" text="Station" />
+                        <TableColumn fx:id="genreColumn" minWidth="0.0" prefWidth="208.0" text="Genre" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </items>
+</SplitPane>
